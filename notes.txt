@@ -1,0 +1,108 @@
+Name of the language:
+
+==Lexing==
+    lexing takes a linear stream of characters and chunks them
+    together into a series of something more akin to "words". In
+    programming languages, each of these words is called a token.
+
+==Parsing==
+    Parsing is where our syntax gets a grammar. Making sentences
+    out of words is the same thing a parser does with tokens
+
+    A parser has a flat sequence of tokens and builds a tree
+    structure that is like grammar
+
+==Static analyis==
+
+basically analyze the sentence we created
+This is also when we determine whether our language is
+dynamically typed or if it isn't.
+
+==Intermediate representation==
+this is basically the middle between your language
+and the final architecture where the program will run
+
+==Optimization==
+Here we can optimize any code to make it more efficient.
+
+A simple example is constant folding: Which basically
+means if a value always evalutes to the exact same
+value simply change it the the value it evaluates to
+example:
+
+    a = 1 + 2 + 3  <- pre optimization
+    --------------- 
+    a = 6           <- post optimization
+
+==Code generation(code gen)==
+
+We either generate instructions for a real CPU or a virtual
+one.
+
+I think this means we either make binary code or bytecode
+
+==Virtual machine==
+If your compiler produces bytecode you gotta do more.
+You can either make a small compiler for each architecture
+which will convert bytecode to code for that machine, or
+you can write a virtual machine program that basically
+emulates a hypothetical chip.
+
+VMS are slower because every instruction must be simulated
+at runtime, but they are more compatible
+
+*******IMPORTANT***********
+the farther down the pipeline you push the architecure
+specific work, The more of the phases prior to that will
+be compatible across different architectures. 
+
+==Runtime==
+if we compiled it to machine code we simply execute it.
+Otherwise if we compiled to bytecode we need to use the
+VM and load the program into that
+
+==JIT==
+just in tyime compilers compile on your end rather than
+the prior. Therefore they are compatible with basically
+any system maybe...?
+
+JIT basically has to compile to IL(intermediate langauge)
+then to machine code. Therefore it takes longer on first
+run of the software, but calls after that will be much
+faster.
+
+==Compiler vs interpreter==
+Compiling is an implementation technique. Making
+bytecode or machine code means that you are certainly
+compiling.
+
+It also means we translate one source code to another
+WITHOUT EXECUTING IT!
+
+Interpreters on the other hand mean we take the source 
+code and execute it right awaay.
+
+compilers = .exe for windows
+
+interpreters NEED their own thing to run it. 
+For example: Node.js
+
+Cpython is... both? it is an interpreter and has a compiler
+
+GO AS AN EXAMPLE:
+is a compiler, is an interpreter, and has a compiler.
+
+it compiles go to bytecode OR machine code (idk which)
+
+it can also run program immediately from source
+
+it also has a compiler, as when you use it as an interpreter
+it still compiles it internally
+
+== Arguments and parameters == 
+An argument is an actual value you pass to a function
+
+a parameter is a variable that holds the value of 
+the argument inside of the body of a function
+
+
