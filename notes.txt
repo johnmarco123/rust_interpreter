@@ -105,4 +105,4 @@ An argument is an actual value you pass to a function
 a parameter is a variable that holds the value of 
 the argument inside of the body of a function
 
-
+STOPPED AT https://craftinginterpreters.com/parsing-expressions.html 
