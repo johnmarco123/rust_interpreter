@@ -1,5 +1,11 @@
 use std::{env, process};
-use rust_interpreter::lox;
+
+
+mod error;
+use error::*;
+
+mod scanner;
+use scanner::*;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
