@@ -1,6 +1,12 @@
 use std::{env,
 process, io::{self, Write}, fs};
 
+mod expr;
+use expr::*;
+
+mod parser;
+use parser::*;
+
 mod token;
 use token::*;
 
